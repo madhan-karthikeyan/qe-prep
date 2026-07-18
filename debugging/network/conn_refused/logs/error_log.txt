@@ -1,0 +1,16 @@
+Terminal 1: Start server
+$ python solution/server.py
+Echo server listening on port 9999...
+
+Terminal 2: Run broken client
+$ python broken/buggy_client.py
+Traceback (most recent call last):
+  File "broken/buggy_client.py", line 7, in <module>
+    run_client()
+  File "broken/buggy_client.py", line 5, in run_client
+    sock.connect(("127.0.0.1", 5000))
+ConnectionRefusedError: [Errno 111] Connection refused
+
+Terminal 2: Run fixed client (server on 9999)
+$ python solution/client.py
+Received: Hello, server!

@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  python-tests:
+    build:
+      context: ../python
+      dockerfile: Dockerfile
+    volumes:
+      - ../python:/app
+
+  go-tests:
+    build:
+      context: ../go
+      dockerfile: Dockerfile
+    volumes:
+      - ../go:/app
+
+  java-tests:
+    build:
+      context: ../java
+      dockerfile: Dockerfile
+    volumes:
+      - ../java:/app

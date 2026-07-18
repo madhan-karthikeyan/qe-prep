@@ -1,0 +1,3 @@
+com/qe/test/logger/LoggerTest.class
+com/qe/test/filter/LogFilterTest.class
+com/qe/test/rotation/RotatingFileWriterTest.class

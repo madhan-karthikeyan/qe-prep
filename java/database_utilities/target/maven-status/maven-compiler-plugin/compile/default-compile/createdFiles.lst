@@ -1,0 +1,8 @@
+com/qe/test/db/InMemoryDatabase$Operation.class
+com/qe/test/db/InMemoryDatabase.class
+com/qe/test/db/InMemoryDatabase$Transaction.class
+com/qe/test/db/InMemoryDatabase$Column.class
+com/qe/test/db/InMemoryDatabase$InsertOperation.class
+com/qe/test/db/InMemoryDatabase$Table.class
+com/qe/test/db/CrudOperations$Entity.class
+com/qe/test/db/CrudOperations.class

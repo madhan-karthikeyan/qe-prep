@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "qe-interview-playbook-python"
+version = "0.1.0"
+description = "Python interview preparation problems"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+disallow_untyped_defs = false
+disallow_any_unimported = false
+exclude = "tests/"
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py", "benchmark_*.py"]
+addopts = "-v --tb=short --benchmark-min-rounds=100 --benchmark-max-time=1.0"

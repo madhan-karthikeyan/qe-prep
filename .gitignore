@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Go
+go/bin/
+*.exe
+*.test
+*.out
+
+# Java
+java/target/
+*.class
+*.jar
+*.war
+.settings/
+.project
+.classpath
+.idea/
+*.iml
+.vscode/
+
+# C/C++
+*.o
+*.a
+*.so
+c/build/
+cpp/build/
+
+# Docker
+.docker/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log

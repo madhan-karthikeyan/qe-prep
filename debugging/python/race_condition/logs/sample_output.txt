@@ -1,0 +1,15 @@
+$ python broken/buggy_counter.py
+Final counter value: 98543
+Expected: 100000
+
+$ python broken/buggy_counter.py
+Final counter value: 99102
+Expected: 100000
+
+$ python broken/buggy_counter.py
+Final counter value: 97321
+Expected: 100000
+
+$ python solution/counter.py
+Final counter value: 100000
+Expected: 100000

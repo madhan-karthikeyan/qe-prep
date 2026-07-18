@@ -1,0 +1,5 @@
+com/qe/test/logger/LogRecord.class
+com/qe/test/filter/LogFilter.class
+com/qe/test/rotation/RotatingFileWriter.class
+com/qe/test/logger/LogLevel.class
+com/qe/test/logger/Logger.class

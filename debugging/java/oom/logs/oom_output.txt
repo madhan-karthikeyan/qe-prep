@@ -1,0 +1,15 @@
+$ javac BuggyCache.java && java -Xmx64m BuggyCache
+Cached 100 entries, cache size: 100
+Cached 200 entries, cache size: 200
+Cached 300 entries, cache size: 300
+Cached 400 entries, cache size: 400
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at BuggyCache.compute(BuggyCache.java:9)
+	at BuggyCache.main(BuggyCache.java:18)
+
+$ java -Xmx64m -XX:+HeapDumpOnOutOfMemoryError BuggyCache
+java.lang.OutOfMemoryError: Java heap space
+Dumping heap to java_pid12345.hprof ...
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at BuggyCache.compute(BuggyCache.java:9)
+	at BuggyCache.main(BuggyCache.java:18)

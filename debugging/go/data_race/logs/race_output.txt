@@ -1,0 +1,28 @@
+$ cd broken && go run -race .
+==================
+WARNING: DATA RACE
+Write at 0x00c000138000 by goroutine 19:
+  main.(*Cache).Set()
+      /home/user/debugging/go/data_race/broken/buggy_cache.go:10 +0x64
+  main.main.func1()
+      /home/user/debugging/go/data_race/broken/buggy_cache.go:28 +0x7d
+
+Previous read at 0x00c000138000 by goroutine 73:
+  main.(*Cache).Get()
+      /home/user/debugging/go/data_race/broken/buggy_cache.go:14 +0x47
+  main.main.func2()
+      /home/user/debugging/go/data_race/broken/buggy_cache.go:35 +0x67
+
+Goroutine 19 (running) created at:
+  main.main()
+      /home/user/debugging/go/data_race/broken/buggy_cache.go:26 +0x9a
+
+Goroutine 73 (running) created at:
+  main.main()
+      /home/user/debugging/go/data_race/broken/buggy_cache.go:33 +0xf4
+==================
+cache operations completed
+Found 1 data race(s)
+
+$ cd solution && go run -race .
+cache operations completed without race

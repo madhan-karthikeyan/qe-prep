@@ -1,0 +1,10 @@
+$ docker build -t exit-demo broken/
+$ docker run -d --name exit-demo-container exit-demo
+$ docker ps -a --filter name=exit-demo-container
+CONTAINER ID   IMAGE       COMMAND           CREATED         STATUS                     PORTS     NAMES
+a1b2c3d4e5f6   exit-demo   "python app.py"   5 seconds ago   Exited (0) 3 seconds ago             exit-demo-container
+
+$ docker logs exit-demo-container
+Container started
+Doing some work...
+Done!

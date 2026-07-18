@@ -1,0 +1,5 @@
+com/qe/test/api/TestServer$ItemsHandler.class
+com/qe/test/api/ApiTester$TestResult.class
+com/qe/test/api/TestServer$ItemByIdHandler.class
+com/qe/test/api/TestServer.class
+com/qe/test/api/ApiTester.class
